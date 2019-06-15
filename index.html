@@ -4,54 +4,16 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<script src="scripts/a-frame.js"></script>
 	<script src="scripts/ar.js"></script>
-	<script>
-		AFRAME.registerComponent('vidhandler', {
-			init: function () {
-				this.toggle = false;
-				document.querySelector("#vid").pause(); //reference to the video
-			},
-			tick: function () {
-				if (document.querySelector("a-marker").object3D.visible == true) {
-					if (!this.toggle) {
-
-						this.toggle = true;
-						document.querySelector("#vid").play();
-					}
-				} else {
-					this.toggle = false;
-					document.querySelector("#vid").pause();
-				}
-			}
-		});
-	</script>
 </head>
 <body style='margin : 0px; overflow: hidden;'>
 
-	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono; trackingMethod: best; debugUIEnabled: true;'
-			 vr-mode-ui="enabled: false">
-		<a-assets>
-			<video type="video/mp4" id="vid" loop="false" src="720.mp4" webkit-playsinline></video>
-		</a-assets>
-
-		<a-marker preset="hiro">
-			<a-video vidhandler position="0 0.2 0" src="#vid" rotation="90 180 0"></a-video>
-		</a-marker>
+	<a-scene embedded 
+			 arjs='sourceType: webcam; detectionMode: mono; trackingMethod: best; debugUIEnabled: false;'
+			 vr-mode-ui="enabled: false">	
         <a-marker type='pattern' patternUrl='images/A/pattern-letterA.patt'>
             <a-box position='0 0 0' material='opacity: 0.5; side:double; color:blue;'>
             </a-box>
 		</a-marker>
-		<a-marker type='pattern' patternUrl='images/B/pattern-letterB.patt'>
-            <a-box position='0 0 0' material='opacity: 0.5; side:double; color:red;'>
-            </a-box>
-		</a-marker>
-		<a-marker type='pattern' patternUrl='images/C/pattern-letterC.patt'>
-            <a-box position='0 0 0' material='opacity: 0.5; side:double; color:green;'>
-            </a-box>
-		</a-marker>
-		<a-marker type='pattern' patternUrl='images/D/pattern-letterD.patt'>
-            <a-box position='0 0 0' material='opacity: 0.5; side:double; color:yellow;'>
-            </a-box>
-        </a-marker>
 		<a-entity camera></a-entity>
 	</a-scene>
 
