@@ -10,17 +10,29 @@
 
 	<a-scene embedded 
 			 arjs='sourceType: webcam; detectionMode: mono; trackingMethod: best; debugUIEnabled: false;'
-			 vr-mode-ui="enabled: false">	
-			 <a-marker type='pattern' url='https://raw.githubusercontent.com/jeromeetienne/AR.js/master/three.js/examples/marker-training/examples/pattern-files/pattern-hiro.patt'>
-				<a-box position='0 0.5 0' depth="1" height="1" width="1" material='color: green;'></a-box>
+			 vr-mode-ui="enabled: false">		
+
+			<a-assets>				
+				<img id='img1' src='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/1-marker.jpg'>
+				<img id='img2'src='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/2-marker.png'>
+				<img id='img3'src='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/3-marker.jpeg'>
+				<img id='img4'src='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/4-marker.png'>		
+			</a-assets>
+
+			<a-marker type='pattern' url='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/patterns/pattern-1.patt'>
+				<a-plane src="#img1" height="100" width="100" rotation="-90 0 0"></a-plane>
 			</a-marker>	
 
-			<a-marker type='pattern' url='https://raw.githubusercontent.com/jeromeetienne/AR.js/master/three.js/examples/marker-training/examples/pattern-files/pattern-kanji.patt'>
-				<a-box position='0 0.5 0' depth="1" height="1" width="1" material='color: green;'></a-box>
-			</a-marker>		
+			<a-marker type='pattern' url='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/patterns/pattern-2.patt'>
+				<a-plane src="#img2" height="100" width="100" rotation="-90 0 0"></a-plane>
+			</a-marker>	
 
-			<a-marker type='pattern' url='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/A/pattern-letterA.patt'>
-				<a-box position='0 0.5 0' depth="1" height="1" width="1" material='color: blue;'></a-box>
+			<a-marker type='pattern' url='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/patterns/pattern-3.patt'>
+				<a-plane src="#img3" height="100" width="100" rotation="-90 0 0"></a-plane>
+			</a-marker>	
+
+			<a-marker type='pattern' url='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/patterns/pattern-4.patt'>
+				<a-plane src="#img4" height="100" width="100" rotation="-90 0 0"></a-plane>
 			</a-marker>	
 		<a-entity camera></a-entity>
 	</a-scene>
