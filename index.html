@@ -10,12 +10,9 @@
 	<a-scene embedded 
 			 arjs='sourceType: webcam; detectionMode: mono; trackingMethod: best; debugUIEnabled: false;'
 			 vr-mode-ui="enabled: false">	
-			 <a-marker preset="hiro">
-				<a-box position='0 0.5 0' material='color: yellow;'></a-box>
-			</a-marker>
-			<a-marker type='pattern' url='pattern-1.patt'>
-				<a-box position='0 0.5 0' material='color: yellow;'></a-box>
-			</a-marker>
+			 <a-marker type='pattern' url='http://examples.org/hiro.patt'>
+				<a-box position='0 0.5 0' material='color: blue;'></a-box>
+			</a-marker>			
 		<a-entity camera></a-entity>
 	</a-scene>
 
