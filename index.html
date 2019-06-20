@@ -8,9 +8,10 @@
 </head>
 <body style='margin : 0px; overflow: hidden;'>
 
-	<a-scene embedded 
-			 arjs='detectionMode: mono; trackingMethod: best; debugUIEnabled: false;'
-			 vr-mode-ui="enabled: false">		
+	<a-scene  stats 
+		embedded 
+		arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180 ;debugUIEnabled: false;'
+		>		
 
 			<a-assets>				
 				<img id='img1' src='https://raw.githubusercontent.com/ArnonDanon/EthiopianAR/master/images/11.jpg'>
